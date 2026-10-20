@@ -7,3 +7,4 @@ def main(page: ft.Page):
     boton = ft.Button("Click Aquí", on_click=cambiar)
     page.add(texto, boton)
 ft.run(main)
+print ("hola")
