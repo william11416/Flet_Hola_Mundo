@@ -1,10 +1,19 @@
 import flet as ft
+
 def main(page: ft.Page):
+    # Opcional: configurar el título de la página
+    page.title = "Mi App Flet"
+    
     texto = ft.Text("")
+    
     def cambiar(e):
         texto.value = "Hola Mundo"
         page.update()
-    boton = ft.Button("Click Aquí", on_click=cambiar)
+        
+    # En Flet 1.x se utiliza ft.ElevatedButton correctamente
+    boton = ft.ElevatedButton("Click Aquí", on_click=cambiar)
+    
     page.add(texto, boton)
-ft.run(main)
-print ("hola")
+
+if __name__ == "__main__":
+    ft.app(target=main)
